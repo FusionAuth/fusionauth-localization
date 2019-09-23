@@ -1,0 +1,52 @@
+/*
+ * Copyright (c) 2019, FusionAuth, All Rights Reserved
+ */
+savantVersion = "1.0.0"
+
+project(group: "io.fusionauth", name: "fusionauth-localization", version: "1.9.0", licenses: ["ApacheV2_0"]) {
+  workflow {
+    standard()
+  }
+
+  publishWorkflow {
+    subversion(repository: "http://svn.inversoft.org/savant")
+  }
+
+  publications {
+    standard()
+  }
+}
+
+/*
+ * Define Plugins
+ */
+
+java = loadPlugin(id: "org.savantbuild.plugin:java:1.0.2")
+idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
+release = loadPlugin(id: "org.savantbuild.plugin:release-git:${savantVersion}")
+
+/*
+ * Plugin Settings
+ */
+
+java.settings.javaVersion = "1.8"
+
+target(name: "clean", description: "Cleans out the build directory") {
+}
+
+target(name: "compile", description: "Compiles the project") {
+}
+
+target(name: "jar", description: "JARs the project", dependsOn: ["compile"]) {
+}
+
+target(name: "int", description: "Releases a local integration build of the project") {
+}
+
+target(name: "idea", description: "Updates the IntelliJ IDEA module file") {
+  idea.iml()
+}
+
+target(name: "release", description: "Releases a full version of the project", dependsOn: ["clean", "int"]) {
+  release.release()
+}
