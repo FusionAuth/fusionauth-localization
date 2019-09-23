@@ -13,7 +13,6 @@ project(group: "io.fusionauth", name: "fusionauth-localization", version: "1.9.0
   }
 
   publications {
-    standard()
   }
 }
 
