@@ -4,13 +4,20 @@ If you're using FusionAuth and your first language is not English, we can use yo
 
 If you'd like to contribute, feel free to submit a PR or open an issue we can discuss how you can help!
 
+## Credits
+- [@ssirag](https://github.com/markschmid) Initial support for German! Danke!
+- [@pawpro](https://github.com/pawpro) Initial support for Polish! Dzięki!
+- The FusionAuth team - couldn't have done it without you! 
+
 ### Project Layout
 
 The theme folder contains translations that can be used in a FusionAuth theme. 
 
 ```
 theme
-├── message.properties
+├── message.properties       English
+├── message_de.properties    German
+├── message_pl.properties    Polish
 ```
 
 ### How to use a translation
