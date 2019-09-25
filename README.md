@@ -5,9 +5,34 @@ If you're using FusionAuth and your first language is not English, we can use yo
 If you'd like to contribute, feel free to submit a PR or open an issue we can discuss how you can help!
 
 ## Credits
-- [@ssirag](https://github.com/markschmid) Initial support for German! Danke!
-- [@pawpro](https://github.com/pawpro) Initial support for Polish! Dzięki!
+- [@ssirag](https://github.com/markschmid) Initial support for German. Danke!
+- [@pawpro](https://github.com/pawpro) Initial support for Polish. Dzięki!
+- [@jerryhopper](https://github.com/jerryhopper) Initial support for Dutch. Bedankt!
+  - [@flangfeldt](https://github.com/flangfeldt) for the review and assist!
 - The FusionAuth team - couldn't have done it without you! 
+
+## Wanted
+- Arabic - theme/message_ar.properties
+- Czech - theme/message_cz.properties
+- Danish -theme/message_da.properties
+- Chinese (Taiwan) - theme/message_zh_TW.properties
+- Chinese (China) - theme/message_zh_CN.properties
+- Finnish - theme/message_fi.properties
+- French - theme/message_fr.properties
+- Greek - theme/message_el.properties
+- Hindi - theme/message_hi.properties
+- Italian - theme/message_it.properties
+- Japanese - theme/message_ja.properties
+- Korean - theme/message_ko.properties
+- Norwegian - theme/message_no.properties
+- Portuguese - theme/message_pt.properties
+- Portuguese (Brazilian) - theme/message_pt_BR.properties
+- Portuguese (Portugal) - theme/message_pt_PT.properties
+- Russian - theme/message_ru.properties
+- Swedish - theme/message_sv.properties
+- Spanish - theme/message_es.properties
+- Ukrainian - theme/message_ua.properties
+
 
 ### Project Layout
 
@@ -17,6 +42,7 @@ The theme folder contains translations that can be used in a FusionAuth theme.
 theme
 ├── message.properties       English
 ├── message_de.properties    German
+├── message_nl.properties    Dutch
 ├── message_pl.properties    Polish
 ```
 
