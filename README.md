@@ -47,7 +47,7 @@ This is just a suggested list, please contribute whatever you can!
 
 ### Project Layout
 
-The theme folder contains translations that can be used in a FusionAuth theme.
+The theme folder contains translations that can be used in a FusionAuth theme. 
 
 ```
 theme
