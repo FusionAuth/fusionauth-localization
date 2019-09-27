@@ -5,7 +5,7 @@ If you're using FusionAuth and your first language is not English, we can use yo
 If you'd like to contribute, feel free to submit a PR or open an issue we can discuss how you can help!
 
 ## Credits
-- [@ssirag](https://github.com/markschmid) Initial support for German. Danke!
+- [@markschmid](https://github.com/markschmid) Initial support for German. Danke!
 - [@pawpro](https://github.com/pawpro) Initial support for Polish. Dzięki!
 - [@jerryhopper](https://github.com/jerryhopper) Initial support for Dutch. Bedankt!
   - [@flangfeldt](https://github.com/flangfeldt) for the review and assist!
