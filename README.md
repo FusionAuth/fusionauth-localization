@@ -9,19 +9,19 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@pawpro](https://github.com/pawpro) Initial support for Polish. Dzięki!
 - [@jerryhopper](https://github.com/jerryhopper) Initial support for Dutch. Bedankt!
   - [@flangfeldt](https://github.com/flangfeldt) for the review and assist!
-- The FusionAuth team - couldn't have done it without you!
+- The FusionAuth team - couldn't have done it without you! 
 
 
 ## How to translate
 
-Start with the `theme/message.properties` as a base, and rename it by adding a country code suffix. The wanted section outlines the country code and filename per language. If the language you are translating is not listed there simply find your two character country code and append it to follow the pattern below.
+Start with the `theme/message.properties` as a base, and rename it by adding a country code suffix. The wanted section outlines the country code and filename per language. If the language you are translating is not listed there simply find your two character country code and append it to follow the pattern below. 
 
 It is not required that you translate every message, when a message is not translated FusionAuth will fall back to the default message in the theme. This is generally English unless you have modified the default messages in your theme.
 
 As FusionAuth adds new messages they will not (currently) be automatically added to any of these translated files. This means these messages will only be displayed in English until translated. We will be working on a process to help identify these gaps as we move forward to provide a mechanism to keep these translations up to date.  
 
 ## Wanted
-This is just a suggested list, please contribute whatever you can!
+This is just a suggested list, please contribute whatever you can! 
 
 - Arabic - theme/message_ar.properties
 - Czech - theme/message_cz.properties
