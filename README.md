@@ -9,6 +9,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@pawpro](https://github.com/pawpro) Initial support for Polish. Dzięki!
 - [@jerryhopper](https://github.com/jerryhopper) Initial support for Dutch. Bedankt!
   - [@flangfeldt](https://github.com/flangfeldt) for the review and assist!
+- [@Fahrenholz](https://github.com/Fahrenholz) Initial support for French. Merci!
 - The FusionAuth team - couldn't have done it without you! 
 
 
@@ -29,7 +30,6 @@ This is just a suggested list, please contribute whatever you can! We're happy t
 - Chinese (Taiwan) - theme/message_zh_TW.properties
 - Chinese (China) - theme/message_zh_CN.properties
 - Finnish - theme/message_fi.properties
-- French - theme/message_fr.properties
 - Greek - theme/message_el.properties
 - Hindi - theme/message_hi.properties
 - Italian - theme/message_it.properties
@@ -53,6 +53,7 @@ The theme folder contains translations that can be used in a FusionAuth theme.
 theme
 ├── message.properties       English
 ├── message_de.properties    German
+├── message_fr.properties    French
 ├── message_nl.properties    Dutch
 ├── message_pl.properties    Polish
 ```
