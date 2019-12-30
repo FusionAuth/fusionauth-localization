@@ -10,6 +10,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@jerryhopper](https://github.com/jerryhopper) Initial support for Dutch. Bedankt!
   - [@flangfeldt](https://github.com/flangfeldt) for the review and assist!
 - [@Fahrenholz](https://github.com/Fahrenholz) Initial support for French. Merci!
+- [@Loketony](https://github.com/Loketony) Initial support for Swedish. Tack!
 - The FusionAuth team - couldn't have done it without you! 
 
 
@@ -40,7 +41,6 @@ This is just a suggested list, please contribute whatever you can! We're happy t
 - Portuguese (Brazilian) - theme/message_pt_BR.properties
 - Portuguese (Portugal) - theme/message_pt_PT.properties
 - Russian - theme/message_ru.properties
-- Swedish - theme/message_sv.properties
 - Spanish - theme/message_es.properties
 - Ukrainian - theme/message_ua.properties
 
@@ -56,6 +56,7 @@ theme
 ├── message_fr.properties    French
 ├── message_nl.properties    Dutch
 ├── message_pl.properties    Polish
+├── message_sv.properties    Swedish
 ```
 
 ### How to use a translation
