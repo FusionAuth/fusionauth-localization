@@ -12,7 +12,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@Fahrenholz](https://github.com/Fahrenholz) Initial support for French. Merci!
 - [@Loketony](https://github.com/Loketony) Initial support for Swedish. Tack!
 - [@veturi](https://github.com/veturi) Initial support for Finnish. Kiitos!
-- [@wijse] (https://github.com/wijse) Initial support for Danish. Tak! 
+- [@wijse](https://github.com/wijse) Initial support for Danish. Tak! 
 - The FusionAuth team - couldn't have done it without you! 
 
 
