@@ -12,6 +12,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@Fahrenholz](https://github.com/Fahrenholz) Initial support for French. Merci!
 - [@Loketony](https://github.com/Loketony) Initial support for Swedish. Tack!
 - [@veturi](https://github.com/veturi) Initial support for Finnish. Kiitos!
+- [@wijse] (https://github.com/wijse) Initial support for Danish. Tak! 
 - The FusionAuth team - couldn't have done it without you! 
 
 
@@ -28,7 +29,6 @@ This is just a suggested list, please contribute whatever you can! We're happy t
 
 - Arabic - theme/message_ar.properties
 - Czech - theme/message_cz.properties
-- Danish -theme/message_da.properties
 - Chinese (Taiwan) - theme/message_zh_TW.properties
 - Chinese (China) - theme/message_zh_CN.properties
 - Greek - theme/message_el.properties
@@ -52,6 +52,7 @@ The theme folder contains translations that can be used in a FusionAuth theme.
 ```
 theme
 ├── message.properties       English
+├── message_da.properties    Danish
 ├── message_de.properties    German
 ├── message_fi.properties    Finnish
 ├── message_fr.properties    French
