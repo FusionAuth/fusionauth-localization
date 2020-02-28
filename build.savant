@@ -1,9 +1,9 @@
 /*
- * Copyright (c) 2019, FusionAuth, All Rights Reserved
+ * Copyright (c) 2019-2020, FusionAuth, All Rights Reserved
  */
 savantVersion = "1.0.0"
 
-project(group: "io.fusionauth", name: "fusionauth-localization", version: "1.9.3", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-localization", version: "1.15.4", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
