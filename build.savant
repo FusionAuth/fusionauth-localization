@@ -3,7 +3,7 @@
  */
 savantVersion = "1.0.0"
 
-project(group: "io.fusionauth", name: "fusionauth-localization", version: "1.15.8", licenses: ["ApacheV2_0"]) {
+project(group: "io.fusionauth", name: "fusionauth-localization", version: "1.16.0", licenses: ["ApacheV2_0"]) {
   workflow {
     standard()
   }
@@ -20,15 +20,12 @@ project(group: "io.fusionauth", name: "fusionauth-localization", version: "1.15.
  * Define Plugins
  */
 
-java = loadPlugin(id: "org.savantbuild.plugin:java:1.0.2")
 idea = loadPlugin(id: "org.savantbuild.plugin:idea:1.0.1")
 release = loadPlugin(id: "org.savantbuild.plugin:release-git:${savantVersion}")
 
 /*
  * Plugin Settings
  */
-
-java.settings.javaVersion = "1.8"
 
 target(name: "clean", description: "Cleans out the build directory") {
 }
