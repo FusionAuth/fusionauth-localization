@@ -15,7 +15,8 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@wijse](https://github.com/wijse) Initial support for Danish. Tak! 
 - [@Loketony](https://github.com/Loketony) Initial support for Russion. Благодарность!
 - [@Loketony](https://github.com/Loketony) Initial support for Ukrainian. Спасибі!
-- [@lamuertepeluda](https://github.com/lamuertepeluda) Iniitial support for Italian. Grazie!
+- [@lamuertepeluda](https://github.com/lamuertepeluda) Initial support for Italian. Grazie!
+- [@lluisgener](https://github.com/lluisgener) Initial support for Spanish. Gracias!
 - The FusionAuth team - couldn't have done it without you! 
 
 ## How to translate
@@ -41,7 +42,6 @@ This is just a suggested list, please contribute whatever you can! We're happy t
 - Portuguese - theme/message_pt.properties
 - Portuguese (Brazilian) - theme/message_pt_BR.properties
 - Portuguese (Portugal) - theme/message_pt_PT.properties
-- Spanish - theme/message_es.properties
 
 ### Project Layout
 
@@ -52,6 +52,7 @@ theme
 ├── message.properties       English
 ├── message_da.properties    Danish
 ├── message_de.properties    German
+├── message_es.properties    Spanish
 ├── message_fi.properties    Finnish
 ├── message_fr.properties    French
 ├── message_it.properties    Italian
