@@ -17,6 +17,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@Loketony](https://github.com/Loketony) Initial support for Ukrainian. Спасибі!
 - [@lamuertepeluda](https://github.com/lamuertepeluda) Initial support for Italian. Grazie!
 - [@lluisgener](https://github.com/lluisgener) Initial support for Spanish. Gracias!
+  - [@einar-lanfranco](https://github.com/einar-lanfranco) for the edits and fixes!
 - The FusionAuth team - couldn't have done it without you! 
 
 ## How to translate
