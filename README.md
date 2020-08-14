@@ -29,7 +29,7 @@ It is not required that you translate every message, when a message is not trans
 As FusionAuth adds new messages they will not (currently) be automatically added to any of these translated files. This means these messages will only be displayed in English until translated. We will be working on a process to help identify these gaps as we move forward to provide a mechanism to keep these translations up to date.  
 
 ## Wanted
-This is just a suggested list, please contribute whatever you can! We're happy to pay you for your efforts, if you can contribute a new quality translation we can send you $50 as a token of our appreciation, join the Slack channel and let us know so we can send a gift your way.  
+This is just a suggested list, please contribute whatever you can! We're happy to pay you for your efforts, if you can contribute a new quality translation we can send you $50 as a token of our appreciation, join the [forum](https://fusionauth.io/community/forum/) and let us know so we can send a gift your way.  
 
 - Arabic - theme/message_ar.properties
 - Czech - theme/message_cz.properties
