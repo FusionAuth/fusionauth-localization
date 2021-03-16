@@ -39,7 +39,7 @@ This is just a suggested list, please contribute whatever you can! We're happy t
 - Chinese (China) - theme/message_zh_CN.properties
 - Greek - theme/message_el.properties
 - Hindi - theme/message_hi.properties
-- Indonesian - theme/message_in.properties
+- Indonesian - theme/message_id.properties
 - Japanese - theme/message_ja.properties
 - Korean - theme/message_ko.properties
 - Norwegian - theme/message_no.properties
@@ -58,7 +58,7 @@ theme
 ├── message_es.properties    Spanish
 ├── message_fi.properties    Finnish
 ├── message_fr.properties    French
-├── message_in_ID.properties Indonesian (Indonesia)
+├── message_id_ID.properties Indonesian (Indonesia)
 ├── message_it.properties    Italian
 ├── message_nl.properties    Dutch
 ├── message_pl.properties    Polish
