@@ -19,6 +19,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@lluisgener](https://github.com/lluisgener) Initial support for Spanish. Gracias!
   - [@einar-lanfranco](https://github.com/einar-lanfranco) for the edits and fixes!
 - [@rapcal](https://github.com/rapcal) Initial support for Portuguese (Brazilian). Obrigado!  
+- [@kevinadhiguna](https://github.com/kevinadhiguna) Initial support for Indonesian (Indonesia). Terima kasih!
 - The FusionAuth team - couldn't have done it without you! 
 
 ## How to translate
@@ -38,6 +39,7 @@ This is just a suggested list, please contribute whatever you can! We're happy t
 - Chinese (China) - theme/message_zh_CN.properties
 - Greek - theme/message_el.properties
 - Hindi - theme/message_hi.properties
+- Indonesian - theme/message_in.properties
 - Japanese - theme/message_ja.properties
 - Korean - theme/message_ko.properties
 - Norwegian - theme/message_no.properties
@@ -56,10 +58,11 @@ theme
 ├── message_es.properties    Spanish
 ├── message_fi.properties    Finnish
 ├── message_fr.properties    French
+├── message_in_ID.properties Indonesian (Indonesia)
 ├── message_it.properties    Italian
 ├── message_nl.properties    Dutch
 ├── message_pl.properties    Polish
-├── message_pt_BR.properties Portuguese (Brazilian
+├── message_pt_BR.properties Portuguese (Brazilian)
 ├── message_ru.properties    Russian
 ├── message_sv.properties    Swedish
 ├── message_ua.properties    Ukrainian
