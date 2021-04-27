@@ -2,49 +2,66 @@
 
 WORKING_DIR = File.dirname(__FILE__)
 
-def handleMultiLine(multiLine, line)
-  keyOrComment = line
-  text = ''
-  if multiLine != ''
-    keyOrComment = multiLine + '~2'
-    text = line
-    multiLine = ''
-  else
-    line.match(/^([^#][^=]*)=(.*)/) do |data|
-      keyOrComment = data[1]
-      text = data[2]
-      if /.*\\$/.match?(data[2])
-        multiLine = data[1]
-        keyOrComment += '~1'
-      end
+def handleMultiLine(currentLine, lastPropertyName, isMultiLine)
+  propertyName = ''
+  propertyValue = ''
+  comment = ''
+
+  if isMultiLine
+    propertyName = lastPropertyName
+    propertyValue = currentLine
+    isMultiLine = /.*\\$/.match?(currentLine)
+  elsif /^[^#][^=]*=.*/.match(currentLine)
+    currentLine.strip.match(/^([^#][^=]*)=(.*)/) do |data|
+      propertyName = data[1]
+      propertyValue = data[2]
+      isMultiLine = /.*\\$/.match?(data[2])
     end
+  else
+    comment = currentLine.chomp
   end
-  return keyOrComment, text
+
+  return propertyName, propertyValue, comment, isMultiLine
 end
 
 def loadMessages (file)
   properties = {}
-  multiLine = ''
-  IO.foreach(file) do |line|
-    line.strip
-    newLine = handleMultiLine(multiLine, line)
-    properties[newLine[0]] = newLine[1] if newLine[0] != ''
+  lastPropertyName = ''
+  isMultiLine = false
+
+  IO.foreach(file) do |currentLine|
+    data = handleMultiLine(currentLine, lastPropertyName, isMultiLine)
+    propertyName = data[0]
+    propertyValue = data[1]
+    isMultiLine = data[3]
+    if propertyName != ''
+      if properties.has_key?(propertyName)
+        properties[propertyName] += "\n" + propertyValue
+       else
+       properties[propertyName] = propertyValue
+      end
+    end
+    lastPropertyName = propertyName
   end
-  properties
+
+  return properties
 end
 
 # Load messages.properties
-mainFile = []
+mainFileTemplate = []
+isMultiLine = false
 
-multiLine = ''
-IO.foreach("#{WORKING_DIR}/theme/messages.properties") do |line|
-  line.chomp
-  newLine = handleMultiLine(multiLine, line)
-#   line = line.gsub(/([^=]*)=(.*)/, '\1') if line =~ /([^#][^=]*)=(.*)/
-#   line = line + '~1' if line =~ /([^#][^=]*)=(.*)\//
-#   line = multiLine + '~2' if line =~ /  \S/
+IO.foreach("#{WORKING_DIR}/theme/messages.properties") do |currentLine|
+  data = handleMultiLine(currentLine, '', isMultiLine)
+  propertyName = data[0]
+  comment = data[2]
+  isMultiLine = data[3]
 
-  mainFile.push(newLine[0])
+  if propertyName != ''
+    mainFileTemplate.push(propertyName)
+  else
+    mainFileTemplate.push(comment)
+  end
 end
 
 englishMessages = loadMessages("#{WORKING_DIR}/theme/messages.properties")
@@ -54,7 +71,7 @@ Dir.foreach("#{WORKING_DIR}/theme") do |filename|
   translatedMessages = loadMessages("#{WORKING_DIR}/theme/#{filename}")
   newTranslations = []
   missingTranslations = []
-  mainFile.each do |line|
+  mainFileTemplate.each do |line|
     hasKey = translatedMessages.has_key?(line)
     if (/^\s*(#|$)/.match?(line)) || hasKey
       line += "=#{translatedMessages[line]}" if hasKey
@@ -65,7 +82,7 @@ Dir.foreach("#{WORKING_DIR}/theme") do |filename|
   end
 
   File.open("#{WORKING_DIR}/theme/#{filename}", "w+") do |f|
-    f.puts(missingTranslations)
+    f.puts(newTranslations)
   end
 
   File.open("#{WORKING_DIR}/missing-translations/#{filename}", "w+") do |f|
