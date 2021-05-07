@@ -9,12 +9,12 @@ def handleMultiLine(currentLine, lastPropertyName, isMultiLine)
 
   if isMultiLine
     propertyName = lastPropertyName
-    propertyValue = currentLine
+    propertyValue = currentLine.strip().chomp('\\')
     isMultiLine = /.*\\$/.match?(currentLine)
   elsif /^[^#][^=]*=.*/.match(currentLine)
     currentLine.strip.match(/^([^#][^=]*)=(.*)/) do |data|
       propertyName = data[1]
-      propertyValue = data[2]
+      propertyValue = data[2].chomp('\\')
       isMultiLine = /.*\\$/.match?(data[2])
     end
   else
@@ -36,7 +36,7 @@ def loadMessages (file)
     isMultiLine = data[3]
     if propertyName != ''
       if properties.has_key?(propertyName)
-        properties[propertyName] += "\n" + propertyValue
+        properties[propertyName] += " " + propertyValue
        else
        properties[propertyName] = propertyValue
       end
@@ -55,18 +55,21 @@ IO.foreach("#{WORKING_DIR}/theme/messages.properties") do |currentLine|
   data = handleMultiLine(currentLine, '', isMultiLine)
   propertyName = data[0]
   comment = data[2]
-  isMultiLine = data[3]
 
   if propertyName != ''
     mainFileTemplate.push(propertyName)
-  else
+  elsif !isMultiLine
     mainFileTemplate.push(comment)
   end
+
+  # Update isMultiLine now otherwise we will output blank lines when comment == '', but is
+  # actually 2nd part of a multiline.
+  isMultiLine = data[3]
 end
 
 englishMessages = loadMessages("#{WORKING_DIR}/theme/messages.properties")
 Dir.foreach("#{WORKING_DIR}/theme") do |filename|
-  next if !filename.match?('_')
+  next if !filename.match?('properties')
 
   translatedMessages = loadMessages("#{WORKING_DIR}/theme/#{filename}")
   newTranslations = []
@@ -85,7 +88,12 @@ Dir.foreach("#{WORKING_DIR}/theme") do |filename|
     f.puts(newTranslations)
   end
 
-  File.open("#{WORKING_DIR}/missing-translations/#{filename}", "w+") do |f|
-    f.puts(missingTranslations)
+  filename = "#{WORKING_DIR}/missing-translations/#{filename}"
+  if missingTranslations.length == 0
+    File.delete(filename) if File.exist?(filename)
+  else
+    File.open(filename, "w+") do |f|
+      f.puts(missingTranslations) if missingTranslations.length > 0
+    end
   end
 end
