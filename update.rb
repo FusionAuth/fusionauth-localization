@@ -93,7 +93,7 @@ Dir.foreach("#{WORKING_DIR}/theme") do |filename|
     File.delete(filename) if File.exist?(filename)
   else
     File.open(filename, "w+") do |f|
-      f.puts(missingTranslations) if missingTranslations.length > 0
+      f.puts(missingTranslations)
     end
   end
 end
