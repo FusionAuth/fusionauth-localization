@@ -72,7 +72,6 @@ theme
 ├── message_sv.properties    Swedish
 ├── message_ua.properties    Ukrainian
 missing-translations
-├── message.properties       English
 ├── message_ar.properties    Arabic
 ├── message_da.properties    Danish
 ├── message_de.properties    German

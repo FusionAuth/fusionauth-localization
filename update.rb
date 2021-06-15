@@ -1,5 +1,29 @@
 #!/usr/bin/env ruby
 
+require 'optparse'
+require 'ostruct'
+
+# Parse the options
+options = OpenStruct.new
+oparser = OptionParser.new do |opts|
+  opts.banner = 'Usage: update.rb'
+  opts.separator ''
+  opts.separator 'Description: Updates the translation files in theme and missing-translations.'
+  opts.separator ''
+  opts.separator 'Files in theme/ will be reordered to match the messages.properties (English) ordering of comments and keys.'\
+    ' Files in missing-translations/ will be updated to reflect any missing translations (i.e. keys may be added or removed).'
+  opts.separator ''
+  opts.separator 'Options:'
+
+  opts.on_tail('-h', '--help', 'Display this message') do
+    puts opts
+    exit
+  end
+end
+oparser.parse!
+
+
+# Update theme/ and missing-translations/ files.
 WORKING_DIR = File.dirname(__FILE__)
 
 def handleMultiLine(currentLine, lastPropertyName, isMultiLine)
