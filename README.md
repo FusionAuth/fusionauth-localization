@@ -21,6 +21,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@rapcal](https://github.com/rapcal) Initial support for Portuguese (Brazilian). Obrigado!  
 - [@kevinadhiguna](https://github.com/kevinadhiguna) Initial support for Indonesian (Indonesia). Terima kasih!
 - [@kevinadhiguna](https://github.com/kevinadhiguna) Initial support for Japanese. ありがとうございました
+- [@zahertalab](https://github.com/zahertalab) Initial support for Arabic. اشكرك
 - The FusionAuth team - couldn't have done it without you! 
 
 ## How to translate
@@ -34,7 +35,6 @@ As FusionAuth adds new messages they will not (currently) be automatically added
 ## Wanted
 This is just a suggested list, please contribute whatever you can! We're happy to pay you for your efforts, if you can contribute a new quality translation we can send you $50 as a token of our appreciation, join the [forum](https://fusionauth.io/community/forum/) and let us know so we can send a gift your way.  
 
-- Arabic - theme/message_ar.properties
 - Czech - theme/message_cz.properties
 - Chinese (Taiwan) - theme/message_zh_TW.properties
 - Chinese (China) - theme/message_zh_CN.properties
