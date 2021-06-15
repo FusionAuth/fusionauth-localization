@@ -37,9 +37,10 @@ def loadMessages (file)
     if propertyName != ''
       if properties.has_key?(propertyName)
         properties[propertyName] += " " + propertyValue
-       else
-       properties[propertyName] = propertyValue
+      else
+        properties[propertyName] = propertyValue
       end
+      properties[propertyName] = properties[propertyName].gsub(/\s+/, ' ')
     end
     lastPropertyName = propertyName
   end
