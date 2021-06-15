@@ -2,7 +2,7 @@
 
 If you're using FusionAuth and your first language is not English, we can use your help! We are shipping support for localized login pages and while our users can localize themselves, we would like to provide a base of languages to use when building out your theme or localization strategy.
 
-If you'd like to contribute, feel free to submit a PR or open an issue we can discuss how you can help!
+If you'd like to contribute, feel free to submit a PR or open an issue so we can discuss how you can help!
 
 ## Credits
 - [@markschmid](https://github.com/markschmid) Initial support for German. Danke!
@@ -21,6 +21,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue we can di
 - [@rapcal](https://github.com/rapcal) Initial support for Portuguese (Brazilian). Obrigado!
 - [@kevinadhiguna](https://github.com/kevinadhiguna) Initial support for Indonesian (Indonesia). Terima kasih!
 - [@kevinadhiguna](https://github.com/kevinadhiguna) Initial support for Japanese. ありがとうございました！
+- [@zahertalab](https://github.com/zahertalab) Initial support for Arabic. اشكرك
 - The FusionAuth team - couldn't have done it without you!
 
 ## How to translate
@@ -36,7 +37,6 @@ As FusionAuth adds new messages they will not (currently) be automatically added
 ## Wanted
 This is just a suggested list, please contribute whatever you can! We're happy to pay you for your efforts, if you can contribute a new quality translation we can send you $50 as a token of our appreciation, join the [forum](https://fusionauth.io/community/forum/) and let us know so we can send a gift your way.
 
-- Arabic - theme/message_ar.properties
 - Czech - theme/message_cz.properties
 - Chinese (Taiwan) - theme/message_zh_TW.properties
 - Chinese (China) - theme/message_zh_CN.properties
@@ -47,6 +47,7 @@ This is just a suggested list, please contribute whatever you can! We're happy t
 - Norwegian - theme/message_no.properties
 - Portuguese - theme/message_pt.properties
 - Portuguese (Portugal) - theme/message_pt_PT.properties
+- Punjabi - theme/message_pa.properties
 
 ### Project Layout
 
@@ -55,6 +56,7 @@ The theme folder contains translations that can be used in a FusionAuth theme. T
 ```
 theme
 ├── message.properties       English
+├── message_ar.properties    Arabic
 ├── message_da.properties    Danish
 ├── message_de.properties    German
 ├── message_es.properties    Spanish
@@ -71,6 +73,7 @@ theme
 ├── message_ua.properties    Ukrainian
 missing-translations
 ├── message.properties       English
+├── message_ar.properties    Arabic
 ├── message_da.properties    Danish
 ├── message_de.properties    German
 ├── message_es.properties    Spanish
@@ -87,6 +90,30 @@ missing-translations
 ├── message_ua.properties    Ukrainian
 ```
 
-### How to use a translation
+## How to use a translation
 
-When editing a theme in the FusionAuth UI you have the option to add additional supported languages in the Message tab. Click the language you would like to add and then copy and paste the language into the text area.
+First, find the language translation you want.
+
+* Clone this project. 
+* Copy the contents of one of the message properties files.
+
+Next, update your theme.
+
+* Log in to the FusionAuth administrative user interface.
+* If you only have the default theme, make a copy. The default theme is immutable.
+* Edit your theme. 
+* Navigate to the "Messages" tab.
+* Select "Add localization"
+* Set the "Locale" to the language.
+* Paste in the contents of the messages properties file.
+* Click "Submit"
+* Click the blue save icon to save the theme.
+* Update your tenant to use the new theme.
+
+![Editing a theme to add localization](/images/theme-editing.png)
+
+Test it out:
+
+* Navigate to your FusionAuth instance and [provide a locale in one of the supported manners](https://fusionauth.io/docs/v1/tech/core-concepts/localization-and-internationalization/#hosted-login-pages).
+
+Not all translations are up to date. Where there are missing messages, the default English text will be displayed. Please contribute any fixes or additional translations for missing messages.
