@@ -6,6 +6,7 @@ def handleMultiLine(currentLine, lastPropertyName, isMultiLine)
   propertyName = ''
   propertyValue = ''
   comment = ''
+  wasMultiLine = isMultiLine
 
   if isMultiLine
     propertyName = lastPropertyName
@@ -21,7 +22,7 @@ def handleMultiLine(currentLine, lastPropertyName, isMultiLine)
     comment = currentLine.chomp
   end
 
-  return propertyName, propertyValue, comment, isMultiLine
+  return propertyName, propertyValue, comment, isMultiLine, wasMultiLine
 end
 
 def loadMessages (file)
@@ -34,8 +35,12 @@ def loadMessages (file)
     propertyName = data[0]
     propertyValue = data[1]
     isMultiLine = data[3]
+    wasMultiLine = data[4]
     if propertyName != ''
       if properties.has_key?(propertyName)
+        if !wasMultiLine
+          abort('Stopping! Duplicate key ' + propertyName + ' in file ' + file)
+        end
         properties[propertyName] += " " + propertyValue
       else
         properties[propertyName] = propertyValue
