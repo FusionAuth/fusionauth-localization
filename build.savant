@@ -42,6 +42,14 @@ target(name: "compile", description: "Compiles the project") {
 target(name: "jar", description: "JARs the project", dependsOn: ["compile"]) {
 }
 
+target(name: "update", description: "Releases a local integration build of the project") {
+  ProcessBuilder pb = new ProcessBuilder("update.rb")
+  def pathname = "."
+  if (!execute(pb, pathname)) {
+    fail("Unable to run update.rb")
+  }
+}
+
 target(name: "int", description: "Releases a local integration build of the project") {
 }
 
@@ -49,6 +57,13 @@ target(name: "idea", description: "Updates the IntelliJ IDEA module file") {
   idea.iml()
 }
 
-target(name: "release", description: "Releases a full version of the project", dependsOn: ["clean", "int"]) {
+target(name: "release", description: "Releases a full version of the project", dependsOn: ["clean", "int", "update"]) {
   release.release()
+}
+
+boolean execute(ProcessBuilder pb, String pathname) {
+  def process = pb.inheritIO().directory(new File(pathname)).start()
+  process.consumeProcessOutput(System.out, System.err)
+  process.waitFor()
+  return process.exitValue() == 0
 }
