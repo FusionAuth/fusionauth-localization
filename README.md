@@ -36,18 +36,18 @@ It is not required that you translate every message, when a message is not trans
 As FusionAuth adds new messages they will not (currently) be automatically added to any of these translated files. This means these messages will only be displayed in English until translated. As mentioned you can find missing translations in the `/missing-translations` files.
 
 ## Wanted
-This is just a suggested list, please contribute whatever you can! We're happy to pay you for your efforts, if you can contribute a new quality translation we can send you $50 as a token of our appreciation, join the [forum](https://fusionauth.io/community/forum/) and let us know so we can send a gift your way.
+
+This is just a suggested list, please feel free to contribute whatever you can!
+
+We're happy to pay you for your efforts; if you can contribute a new quality translation we can send you $50 as a token of our appreciation, join the [forum](https://fusionauth.io/community/forum/) and let us know so we can send a gift your way.
 
 - Czech - theme/message_cz.properties
 - Chinese (Taiwan) - theme/message_zh_TW.properties
 - Chinese (China) - theme/message_zh_CN.properties
 - Greek - theme/message_el.properties
 - Hindi - theme/message_hi.properties
-- Indonesian - theme/message_id.properties
 - Korean - theme/message_ko.properties
 - Norwegian - theme/message_no.properties
-- Portuguese - theme/message_pt.properties
-- Portuguese (Portugal) - theme/message_pt_PT.properties
 - Punjabi - theme/message_pa.properties
 
 ### Project Layout
@@ -116,4 +116,6 @@ Test it out:
 
 * Navigate to your FusionAuth instance and [provide a locale in one of the supported manners](https://fusionauth.io/docs/v1/tech/core-concepts/localization-and-internationalization/#hosted-login-pages).
 
-Not all translations are up to date. Where there are missing messages, the default English text will be displayed. Please contribute any fixes or additional translations for missing messages.
+Not all translations are up to date. Where there are missing messages, the default English text will be displayed.
+
+Please feel free to contribute any fixes or additional translations for missing messages as well!
