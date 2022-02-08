@@ -43,7 +43,7 @@ target(name: "jar", description: "JARs the project", dependsOn: ["compile"]) {
 }
 
 target(name: "update", description: "Releases a local integration build of the project") {
-  ProcessBuilder pb = new ProcessBuilder("update.rb")
+  ProcessBuilder pb = new ProcessBuilder("./update.rb").inheritIO().directory(new File('.'))
   def pathname = "."
   if (!execute(pb, pathname)) {
     fail("Unable to run update.rb")
