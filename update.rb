@@ -2,6 +2,7 @@
 
 require 'optparse'
 require 'ostruct'
+require 'ostruct'
 
 # Parse the options
 options = OpenStruct.new
@@ -21,7 +22,6 @@ oparser = OptionParser.new do |opts|
   end
 end
 oparser.parse!
-
 
 # Update theme/ and missing-translations/ files.
 WORKING_DIR = File.dirname(__FILE__)
@@ -95,6 +95,11 @@ IO.foreach("#{WORKING_DIR}/theme/messages.properties") do |currentLine|
   # Update isMultiLine now otherwise we will output blank lines when comment == '', but is
   # actually 2nd part of a multiline.
   isMultiLine = data[3]
+end
+
+# Add an extra line return to match the build output
+File.open("#{WORKING_DIR}/theme/messages.properties", "a") do |f|
+  f.write "\n"
 end
 
 englishMessages = loadMessages("#{WORKING_DIR}/theme/messages.properties")
