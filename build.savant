@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019-2020, FusionAuth, All Rights Reserved
+ * Copyright (c) 2019-2022, FusionAuth, All Rights Reserved
  */
 savantVersion = "1.0.0"
 
@@ -50,14 +50,14 @@ target(name: "update", description: "Releases a local integration build of the p
   }
 }
 
-target(name: "int", description: "Releases a local integration build of the project") {
+target(name: "int", description: "Releases a local integration build of the project", dependsOn: ["update"]) {
 }
 
 target(name: "idea", description: "Updates the IntelliJ IDEA module file") {
   idea.iml()
 }
 
-target(name: "release", description: "Releases a full version of the project", dependsOn: ["clean", "int", "update"]) {
+target(name: "release", description: "Releases a full version of the project", dependsOn: ["clean", "int"]) {
   release.release()
 }
 
