@@ -23,6 +23,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue so we can
 - [@kevinadhiguna](https://github.com/kevinadhiguna) Initial support for Indonesian (Indonesia). Terima kasih!
 - [@kevinadhiguna](https://github.com/kevinadhiguna) Initial support for Japanese. ありがとうございました！
 - [@zahertalab](https://github.com/zahertalab) Initial support for Arabic. اشكرك
+- [@10935336](https://github.com/10935336) Initial support for Simplified Chinese. 谢谢
 - The FusionAuth team - couldn't have done it without you!
 
 ## How to translate
@@ -43,7 +44,6 @@ We're happy to pay you for your efforts; if you can contribute a new quality tra
 
 - Czech - theme/message_cz.properties
 - Chinese (Taiwan) - theme/message_zh_TW.properties
-- Chinese (China) - theme/message_zh_CN.properties
 - Greek - theme/message_el.properties
 - Hindi - theme/message_hi.properties
 - Korean - theme/message_ko.properties
