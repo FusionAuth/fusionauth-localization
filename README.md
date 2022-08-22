@@ -36,6 +36,10 @@ It is not required that you translate every message, when a message is not trans
 
 As FusionAuth adds new messages they will not (currently) be automatically added to any of these translated files. This means these messages will only be displayed in English until translated. As mentioned you can find missing translations in the `/missing-translations` files.
 
+### New message keys
+
+If you are submitting a PR to this repository, please do not add any values to the base `messages.properties` file. If you find anyplace in a theme where there is a message key that is used but it is not in `messages.properties` please [file an issue in our issues repo](https://github.com/fusionauth/fusionauth-issues/issues) specifying the keys that you'd like to be added to the file. The FusionAuth team will need to add those keys to a properties file managed in a different repository and will track doing so via the submitted issue. If you are managing your own `messages.properties` file and don't care about upstreaming translations to this repository, this note does not apply.
+
 ## Wanted
 
 This is just a suggested list, please feel free to contribute whatever you can!
