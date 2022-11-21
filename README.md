@@ -6,6 +6,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue so we can
 
 ## Credits
 - [@markschmid](https://github.com/markschmid) Initial support for German. Danke!
+  - [@Jeannot-Muller](https://github.com/Jeannot-Muller) for the additions and fixes!
 - [@pawpro](https://github.com/pawpro) Initial support for Polish. Dzięki!
   - [@pigletto](https://github.com/pigletto) for the additions and fixes!
 - [@jerryhopper](https://github.com/jerryhopper) Initial support for Dutch. Bedankt!
