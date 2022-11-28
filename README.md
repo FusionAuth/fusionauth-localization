@@ -11,6 +11,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue so we can
   - [@pigletto](https://github.com/pigletto) for the additions and fixes!
 - [@jerryhopper](https://github.com/jerryhopper) Initial support for Dutch. Bedankt!
   - [@flangfeldt](https://github.com/flangfeldt) for the review and assist!
+  - [@dirksierd](https://github.com/dirksierd) for the additions and fixes!
 - [@Fahrenholz](https://github.com/Fahrenholz) Initial support for French. Merci!
 - [@Loketony](https://github.com/Loketony) Initial support for Swedish. Tack!
 - [@veturi](https://github.com/veturi) Initial support for Finnish. Kiitos!
