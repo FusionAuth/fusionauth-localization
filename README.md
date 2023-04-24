@@ -26,7 +26,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue so we can
 - [@kevinadhiguna](https://github.com/kevinadhiguna) Initial support for Japanese. ありがとうございました！
 - [@zahertalab](https://github.com/zahertalab) Initial support for Arabic. اشكرشكرًا لكك
 - [@10935336](https://github.com/10935336) Initial support for Simplified Chinese. 谢谢
-- [krystofremes](https://github.com/krystofremes) Initial support for Czech. Děkuji
+- [@krystofremes](https://github.com/krystofremes) Initial support for Czech. Děkuji
 - The FusionAuth team - couldn't have done it without you!
 
 ## How to translate
