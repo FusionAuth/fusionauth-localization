@@ -49,7 +49,6 @@ This is just a suggested list, please feel free to contribute whatever you can!
 
 We're happy to pay you for your efforts; if you can contribute a new quality translation we can send you $50 as a token of our appreciation, join the [forum](https://fusionauth.io/community/forum/) and let us know so we can send a gift your way.
 
-- Czech - theme/message_cz.properties
 - Chinese (Taiwan) - theme/message_zh_TW.properties
 - Greek - theme/message_el.properties
 - Hindi - theme/message_hi.properties
