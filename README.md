@@ -64,6 +64,7 @@ The theme folder contains translations that can be used in a FusionAuth theme. T
 theme
 ├── message.properties       English
 ├── message_ar.properties    Arabic
+├── message_cz.properties    Czech
 ├── message_da.properties    Danish
 ├── message_de.properties    German
 ├── message_es.properties    Spanish
