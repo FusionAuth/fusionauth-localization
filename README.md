@@ -72,6 +72,7 @@ theme
 ├── message_de_BE.properties    German (Belgium)
 ├── message_de_CH.properties    German (Switzerland)
 ├── message_de_DE.properties    German (Germany)
+├── message_de_IT.properties    German (Italy)
 ├── message_de_LI.properties    German (Liechtenstein)
 ├── message_de_LU.properties    German (Luxembourg)
 ├── message_es.properties    Spanish
@@ -89,12 +90,6 @@ theme
 missing-translations
 ├── message_ar.properties    Arabic
 ├── message_da.properties    Danish
-├── message_de_AT.properties    German (Austria)
-├── message_de_BE.properties    German (Belgium)
-├── message_de_CH.properties    German (Switzerland)
-├── message_de_DE.properties    German (Germany)
-├── message_de_LI.properties    German (Liechtenstein)
-├── message_de_LU.properties    German (Luxembourg)
 ├── message_es.properties    Spanish
 ├── message_fi.properties    Finnish
 ├── message_fr.properties    French
