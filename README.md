@@ -39,7 +39,7 @@ It is not required that you translate every message, when a message is not trans
 
 As FusionAuth adds new messages they will not (currently) be automatically added to any of these translated files. This means these messages will only be displayed in English until translated. As mentioned you can find missing translations in the `/missing-translations` files.
 
-Some languages have the notion of formal vs informal address, where the appropriate choice depends on the context and the relationship between the speaker and listeners. This is a complex problem, so the FusionAuth locale files default to the formal choice. Please feel free to modify the locale files as needed.
+Additional translation guidelines and rules you can find in the section [General and Language Specific Translation Guidelines](#General-and-Language-Specific-Translation-Guidelines)
 
 ### New message keys
 
@@ -133,3 +133,27 @@ Test it out:
 Not all translations are up to date. Where there are missing messages, the default English text will be displayed.
 
 Please feel free to contribute any fixes or additional translations for missing messages as well!
+
+## General and Language Specific Translation Guidelines
+
+This section documents basic guidelines and rules for a consistent translation across all properties as well as within the different languages. 
+
+Please be aware that any comments within the .properties files itself will be overwritten by the original messages.properties when you run the `update.rb` ruby script. And therefore document any of these comments in this section of the README.
+
+* Some languages have the notion of formal vs informal address, where the appropriate choice depends on the context and the relationship between the speaker and listeners. This is a complex problem, so the FusionAuth locale files default to the formal choice. Please feel free to modify the locale files as needed.
+* The formal greetings and wording is used no matter the assumed age.
+
+### Translation Guidelines for German
+
+* Make sure to follow the Locale differences, most obvious one the use of Sharp S (ß) instead of double-s (ss)
+* `passkey` does not have a German translation and only gets capitalized: `Passkey`
+* `Two-Factor` gets translated to: `Zweistufige Authentifizierung`
+* `login` gets translated to: `Anmeldung`
+* `logout` gets translated to: `Abmeldung`
+* `register` gets translated to: `Registrierung`
+* `magic link` does not have a German translation and only gets capitalized: `Magic Link`
+* `authenticator app` gets translated to: `Authentifizierungs-App`
+* `account` gets translated to: `Konto`
+* `application` gets translated to: `Anwendung`
+* Vendor products or services like APIs (e.g. `OpenID Connect Token API`) don't get translated unless it can be found with the vendor.
+* Dont Locale the number format `(***) ***-**%s` in `two-factor-get-code-at-sms`, as it's unlikely to 100% match the different German-speaking countries. Instead we use `Erhalten Sie einen Code unter der Nummer mit der Endung`
