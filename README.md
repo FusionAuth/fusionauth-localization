@@ -21,6 +21,7 @@ If you'd like to contribute, feel free to submit a PR or open an issue so we can
 - [@lamuertepeluda](https://github.com/lamuertepeluda) Initial support for Italian. Grazie!
 - [@lluisgener](https://github.com/lluisgener) Initial support for Spanish. Gracias!
   - [@einar-lanfranco](https://github.com/einar-lanfranco) for the edits and fixes!
+  - [@RicardoViteriR](https://github.com/RicardoViteriR) for the edits and fixes!
 - [@rapcal](https://github.com/rapcal) Initial support for Portuguese (Brazilian). Obrigado!
   - [@rubensflinco](https://github.com/rubensflinco) for the edits and fixes!
 - [@kevinadhiguna](https://github.com/kevinadhiguna) Initial support for Indonesian (Indonesia). Terima kasih!
