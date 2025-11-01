@@ -33,4 +33,5 @@ jobs:
       # fusionauth-app integrates this repo and expects no changes
       - name: verify nothing has changed
         run: |
+          echo "NOTE: If this fails, run `sb int` locally, git commit the changes, then git push"
           git diff --exit-code
