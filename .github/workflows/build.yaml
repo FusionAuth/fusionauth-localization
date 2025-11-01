@@ -1,0 +1,36 @@
+---
+name: build
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        shell: /usr/bin/bash -l -e -o pipefail {0}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: savant setup
+        run: |
+          curl -O https://repository.savantbuild.org/org/savantbuild/savant-core/2.0.2/savant-2.0.2.tar.gz
+          tar xzvf savant-2.0.2.tar.gz
+          savant-2.0.2/bin/sb --version
+          SAVANT_PATH=$(realpath -s "./savant-2.0.2/bin")
+          echo "${SAVANT_PATH}" >> $GITHUB_PATH
+          mkdir -p ~/.savant/plugins
+          # For now, using the JDK that comes on the GHA runner
+          cat << EOF > ~/.savant/plugins/org.savantbuild.plugin.java.properties
+          17=${JAVA_HOME}
+          EOF
+      - name: run tests/integrate
+        run: |
+          sb clean int
+
+      # fusionauth-app integrates this repo and expects no changes
+      - name: verify nothing has changed
+        run: |
+          git diff --exit-code
