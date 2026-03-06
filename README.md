@@ -88,6 +88,7 @@ theme
 ├── message_pt_BR.properties Portuguese (Brazilian)
 ├── message_ru.properties    Russian
 ├── message_sv.properties    Swedish
+├── message_tr.properties    Turkish
 ├── message_ua.properties    Ukrainian
 missing-translations
 ├── message_ar.properties    Arabic
