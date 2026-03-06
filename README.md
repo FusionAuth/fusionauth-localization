@@ -88,6 +88,7 @@ theme
 ├── message_pt_BR.properties Portuguese (Brazilian)
 ├── message_ru.properties    Russian
 ├── message_sv.properties    Swedish
+├── message_tr.properties    Turkish
 ├── message_ua.properties    Ukrainian
 missing-translations
 ├── message_ar.properties    Arabic
@@ -130,7 +131,7 @@ Next, update your theme.
 
 Test it out:
 
-* Navigate to your FusionAuth instance and [provide a locale in one of the supported manners](https://fusionauth.io/docs/v1/tech/core-concepts/localization-and-internationalization/#hosted-login-pages).
+* Navigate to your FusionAuth instance and [provide a locale in one of the supported manners](https://fusionauth.io/docs/get-started/core-concepts/localization-and-internationalization#hosted-login-pages).
 
 Not all translations are up to date. Where there are missing messages, the default English text will be displayed.
 
