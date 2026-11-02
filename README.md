@@ -48,19 +48,6 @@ Additional translation guidelines and rules you can find in the section [General
 
 If you are submitting a PR to this repository, please do not add any values to the base `messages.properties` file. If you find anyplace in a theme where there is a message key that is used but it is not in `messages.properties` please [file an issue in our issues repo](https://github.com/fusionauth/fusionauth-issues/issues) specifying the keys that you'd like to be added to the file. The FusionAuth team will need to add those keys to a properties file managed in a different repository and will track doing so via the submitted issue. If you are managing your own `messages.properties` file and don't care about upstreaming translations to this repository, this note does not apply.
 
-## Wanted
-
-This is just a suggested list, please feel free to contribute whatever you can!
-
-We're happy to pay you for your efforts; if you can contribute a new quality translation we can send you $50 as a token of our appreciation, join the [forum](https://fusionauth.io/community/forum/) and let us know so we can send a gift your way.
-
-- Chinese (Taiwan) - theme/message_zh_TW.properties
-- Greek - theme/message_el.properties
-- Hindi - theme/message_hi.properties
-- Korean - theme/message_ko.properties
-- Norwegian - theme/message_no.properties
-- Punjabi - theme/message_pa.properties
-
 ### Project Layout
 
 The theme folder contains translations that can be used in a FusionAuth theme. The missing translations folder contains a list of messages that are in the `message.properties` file (English) that are missing from the language indicated by the country code suffix (e.g. `_it` for Italian).
